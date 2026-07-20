@@ -1,0 +1,97 @@
+rg_p = {
+  rg1 = {
+    name     = "dev-rg"
+    location = "eastus"
+  }
+  rg2 = {
+    name     = "prod-rg"
+    location = "centralindia"
+  }
+}
+vn_p = {
+  vnet-1 = {
+    name                = "dev-vnet"
+    location            = "eastus"
+    resource_group_name = "dev-rg"
+    address_space       = ["10.0.0.0/16"]
+  }
+  vnet-2 = {
+    name                = "prod-vnet"
+    location            = "centralindia"
+    resource_group_name = "prod-rg"
+    address_space       = ["20.0.0.0/16"]
+  }
+}
+sn_p = {
+  snet1 = {
+    name                 = "dev-subnet"
+    resource_group_name  = "dev-rg"
+    virtual_network_name = "dev-vnet"
+    address_prefixes     = ["10.0.1.0/24"]
+  }
+  snet2 = {
+    name                 = "prod-subnet"
+    resource_group_name  = "prod-rg"
+    virtual_network_name = "prod-vnet"
+    address_prefixes     = ["20.0.2.0/24"]
+  }
+
+
+}
+vnic_p = {
+  nic1 = {
+    name                 = "dev-nic"
+    location             = "eastus"
+    resource_group_name  = "dev-rg"
+    pip_name             = "dev-ip"
+    virtual_network_name = "dev-vnet"
+    subnet_name          = "dev-subnet"
+
+  }
+  nic2 = {
+    name                 = "prod-nic"
+    location             = "centralindia"
+    resource_group_name  = "prod-rg"
+    pip_name             = "prod-ip"
+    virtual_network_name = "prod-vnet"
+    subnet_name          = "prod-subnet"
+
+  }
+
+}
+ip_p = {
+  ip_dev = {
+    pip_name            = "dev-ip"
+    resource_group_name = "dev-rg"
+    location            = "eastus"
+    allocation_method   = "Static"
+  }
+  ip_prod = {
+    pip_name            = "prod-ip"
+    resource_group_name = "prod-rg"
+    location            = "centralindia"
+    allocation_method   = "Static"
+  }
+}
+
+vm_p = {
+  vm1 = {
+    name                = "dev-01-vm"
+    resource_group_name = "dev-rg"
+    location            = "eastus"
+    size                = "SStandard_E2ds_v6"
+    admin_username      = "test123"
+    admin_password      = "Password@123"
+    nic_name            = "dev-nic"
+  }
+  vm2 = {
+    name                = "prod-01-vm"
+    resource_group_name = "prod-rg"
+    location            = "centralindia"
+    size                = "Standard_D2ds_v3"
+    admin_username      = "test123"
+    admin_password      = "Password@123"
+    nic_name            = "prod-nic"
+  }
+
+}
