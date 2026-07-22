@@ -1,31 +1,28 @@
-# data "azurerm_public_ip" "ip" {
-#   for_each = var.vm-5
-#   name                = each.value.pip_name
-#   resource_group_name = each.value.resource_group_name
-# } 
- data "azurerm_network_interface" "nic_card" {
-    for_each = var.vm-5
+
+resource "azurerm_network_interface" "vnic" {
+    for_each = var.vms
   name                = each.value.nic_name
+  location            = each.value.location
   resource_group_name = each.value.resource_group_name
+
+  ip_configuration {
+    name                          = "dhondu"
+    subnet_id                     = data.azurerm_subnet.snet[each.key].id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id = data.azurerm_public_ip.ip[each.key].id
+  }
 }
 
-
 resource "azurerm_linux_virtual_machine" "vm_amal" {
-  for_each = var.vm-5
+  for_each = var.vms
   name                = each.value.name
   resource_group_name = each.value.resource_group_name
   location            = each.value.location
   size                = each.value.size
-  zone = "2"
   admin_username      = each.value.admin_username
   admin_password =  each.value.admin_password
-  disable_password_authentication  = false
-  network_interface_ids = [
-    data.azurerm_network_interface.nic_card[each.key].id,
-  ]
-
- 
-
+  disable_password_authentication  = false # if u have selected admin_password then document says that u need to select disable password option
+  network_interface_ids = [azurerm_network_interface.vnic[each.key].id,]
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"

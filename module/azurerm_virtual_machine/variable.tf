@@ -1,3 +1,3 @@
-variable "vm-5" {
+variable "vms" {
   type =map(any)
 }
