@@ -13,16 +13,31 @@ module "subnet" {
   sn_c       = var.sn_p
 }
 module "ip" {
-  depends_on = [module.resource_group]
-  source     = "../../module/azurerm_public_ip"
-  pip_c      = var.ip_p
+  # depends_on = [module.resource_group]
+  source = "../../module/azurerm_public_ip"
+  pip_c  = var.ip_p
 }
-module "nic" {
-  depends_on = [module.virtual_network]
-  source     = "../../module/azurerm_network_interface"
-  vnet_c     = var.vnic_p
-}
+
+# module "nic" {
+#   depends_on = [module.virtual_network]
+#   source     = "../../module/azurerm_network_interface"
+#   vnet_c     = var.vnic_p
+# }
 module "vm" {
-  source = "../../module/azurerm_virtual_machine"
-  vm-5   = var.vm_p
+  depends_on = [module.subnet, module.ip]
+  source     = "../../module/azurerm_virtual_machine"
+  vms        = var.vm_p
+}
+#   module "ventpeering1" {
+#     depends_on    = [module.virtual_network]
+#     source        = "../../module/azurerm_peering_group"
+#     peering_c_1_2 = var.peering_p_1_2
+
+#   }
+# }
+
+module "firewall" {
+  depends_on = [module.subnet, module.ip]
+  source     = "../../module/azurerm_firewall"
+  fir        = var.fir_p
 }
