@@ -102,39 +102,3 @@ vm_p = {
 
 }
 
-peering_p_1_2 = {
-
-  p12 = {
-    name                 = "peer1to2"
-    resource_group_name  = "dev-rg"
-    virtual_network_name = "dev-vnet"
-  }
-}
-peering_p_2_1 = {
-  p21 = {
-    name                 = "peeer2to1"
-    resource_group_name  = "prod-rg"
-    virtual_network_name = "prod-vnet"
-  }
-}
-
-fir_p = {
-  fir1 = {
-    pip_name             = "dev-ip"
-    resource_group_name  = "dev-rg"
-    location             = "uaenorth"
-    subnet_name          = "dev-subnet"
-    virtual_network_name = "dev-vnet"
-    name                 = "dev_firewall"
-
-  }
-
-  fir2 = {
-    pip_name             = "prod-ip"
-    resource_group_name  = "prod-rg"
-    location             = "centralindia"
-    subnet_name          = "prod-subnet"
-    virtual_network_name = "prod-vnet"
-    name                 = "prod_firewall"
-  }
-}
