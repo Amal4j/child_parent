@@ -36,8 +36,3 @@ module "vm" {
 #   }
 # }
 
-module "firewall" {
-  depends_on = [module.subnet, module.ip]
-  source     = "../../module/azurerm_firewall"
-  fir        = var.fir_p
-}
