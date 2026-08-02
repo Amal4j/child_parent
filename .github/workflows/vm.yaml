@@ -1,10 +1,9 @@
-name: Deploy Azure VM
-
+name: humari pratcie wali pipeline
 on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  merenaukri:
     runs-on: ubuntu-latest
 
     steps:
