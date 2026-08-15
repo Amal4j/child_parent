@@ -7,6 +7,8 @@ rg_p = {
     name     = "prod-rg"
     location = "centralindia"
   }
+  
+  # Ye RG Bala bhai ke khene pe add kara hai apun ne
   rg3 = {
     name = "bala-rg"
     location = "centralindia"
