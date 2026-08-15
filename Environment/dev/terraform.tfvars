@@ -8,8 +8,13 @@ rg_p = {
     location = "centralindia"
   }
   rg3 = {
-    name = "bala-rg"
+   
+    name = "Apna Rg"
     location = "centralindia"
+  }
+  rg4 = {
+  name = "bala-rg"
+  locatin = "centralindia"
   }
 }
 vn_p = {
