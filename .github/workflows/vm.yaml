@@ -1,6 +1,8 @@
 name: humari pratcie wali pipeline
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 'feature/*'
 
 jobs:
   merenaukri:
