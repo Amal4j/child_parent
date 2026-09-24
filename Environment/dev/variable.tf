@@ -14,9 +14,9 @@ variable "ip_p" {
 variable "vm_p" {
   type = map(any)
 }
-variable "peering_p_1_2" {
-  type = map(any)
-}
-variable "peering_p_2_1" {
-  type = map(any)
-}
+# variable "peering_p_1_2" {
+#   type = map(any)
+
+# variable "peering_p_2_1" {
+#   type = map(any)
+# }
