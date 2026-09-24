@@ -1,4 +1,4 @@
-name: humari pratcie wali pipeline
+name: Creating Virutal Machine at Azure Portal
 on:
   push:
     branches:
