@@ -1,33 +1,33 @@
 rg_p = {
   rg1 = {
     name     = "dev-rg"
-    location = "uaenorth"
+    location = "eastus"
   }
   rg2 = {
     name     = "prod-rg"
-    location = "centralindia"
+    location = "eastus"
   }
 
   # Ye RG Bala bhai ke khene pe add kara hai apun ne
-  rg3 = {
-    name     = "steve"
-    location = "centralindia"
-  }
-  rg4 = {
-    name    = "matt"
-    location = "centralindia"
-  }
+  # rg3 = {
+  #   name     = "steve"
+  #   location = "eastus"
+  # }
+  # rg4 = {
+  #   name    = "matt"
+  #   location = "eastus"
+  # }
 }
 vn_p = {
   vnet-1 = {
     name                = "dev-vnet"
-    location            = "uaenorth"
+    location            = "eastus"
     resource_group_name = "dev-rg"
     address_space       = ["10.0.0.0/16"]
   }
   vnet-2 = {
     name                = "prod-vnet"
-    location            = "centralindia"
+    location            = "eastus"
     resource_group_name = "prod-rg"
     address_space       = ["20.0.0.0/16"]
   }
@@ -51,7 +51,7 @@ sn_p = {
 # # vnic_p = {
 # #   nic1 = {
 # #     name                 = "dev-nic"
-# #     location             = "uaenorth"
+# #     location             = "eastus"
 # #     resource_group_name  = "dev-rg"
 # #     pip_name             = "dev-ip"
 # #     virtual_network_name = "dev-vnet"
@@ -60,7 +60,7 @@ sn_p = {
 # #   }
 # #   nic2 = {
 # #     name                 = "prod-nic"
-# #     location             = "centralindia"
+# #     location             = "eastus"
 # #     resource_group_name  = "prod-rg"
 # #     pip_name             = "prod-ip"
 # #     virtual_network_name = "prod-vnet"
@@ -73,13 +73,13 @@ ip_p = {
   ip_dev = {
     pip_name            = "dev-ip"
     resource_group_name = "dev-rg"
-    location            = "uaenorth"
+    location            = "eastus"
     allocation_method   = "Static"
   }
   ip_prod = {
     pip_name            = "prod-ip"
     resource_group_name = "prod-rg"
-    location            = "centralindia"
+    location            = "eastus"
     allocation_method   = "Static"
   }
 }
@@ -88,8 +88,8 @@ vm_p = {
   vm1 = {
     name                 = "dev-vm-01"
     resource_group_name  = "dev-rg"
-    location             = "uaenorth"
-    size                 = "Standard_F2s_v2"
+    location             = "eastus"
+    size                 = "Standard_D2s_v3"
     admin_username       = "test123"
     admin_password       = "Password@123"
     nic_name             = "dev-nic"
@@ -100,8 +100,8 @@ vm_p = {
   vm2 = {
     name                 = "prod-01-01"
     resource_group_name  = "prod-rg"
-    location             = "centralindia"
-    size                 = "Standard_F2s_v2"
+    location             = "eastus"
+    size                 = "Standard_D2s_v3"
     admin_username       = "test123"
     admin_password       = "Password@123"
     nic_name             = "prod-nic"
