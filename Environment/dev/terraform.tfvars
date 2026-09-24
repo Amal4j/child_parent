@@ -7,9 +7,16 @@ rg_p = {
     name     = "prod-rg"
     location = "centralindia"
   }
+  
+  # Ye RG Bala bhai ke khene pe add kara hai apun ne
   rg3 = {
-    name = "localrg"
+   
+    name = "steve"
     location = "centralindia"
+  }
+  rg4 = {
+  name = "matt"
+  locatin = "centralindia"
   }
 }
 vn_p = {
