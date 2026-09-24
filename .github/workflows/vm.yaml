@@ -1,4 +1,4 @@
-name: humari pratcie wali pipeline
+name: Our new code for action.yaml
 on:
   push:
     branches:
