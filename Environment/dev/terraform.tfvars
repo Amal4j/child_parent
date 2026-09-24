@@ -8,7 +8,7 @@ rg_p = {
     location = "centralindia"
   }
   rg3 = {
-    name = "Apna Rg"
+    name = "localrg"
     location = "centralindia"
   }
 }
