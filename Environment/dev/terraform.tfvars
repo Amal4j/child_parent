@@ -11,11 +11,11 @@ rg_p = {
   # Ye RG Bala bhai ke khene pe add kara hai apun ne
   rg3 = {
    
-    name = "Apna Rg"
+    name = "steve"
     location = "centralindia"
   }
   rg4 = {
-  name = "bala-rg"
+  name = "matt"
   locatin = "centralindia"
   }
 }
