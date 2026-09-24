@@ -1,4 +1,4 @@
-name: Our new code for action.yaml
+name: Creating Virutal Machine at Azure Portal
 on:
   push:
     branches:
