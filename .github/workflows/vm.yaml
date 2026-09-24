@@ -1,8 +1,8 @@
-name: Creating Virutal Machine at Azure Portal
+name: Creating Virutal Machine at Azure
 on:
   push:
     branches:
-      - 'feature/*'
+      - main
 
 jobs:
   merenaukri:
