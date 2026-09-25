@@ -13,7 +13,7 @@ module "subnet" {
   sn_c       = var.sn_p
 }
 module "ip" {
-  # depends_on = [module.resource_group]
+  depends_on = [module.resource_group]
   source = "../../module/azurerm_public_ip"
   pip_c  = var.ip_p
 }
