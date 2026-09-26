@@ -20,3 +20,6 @@ variable "vm_p" {
 # variable "peering_p_2_1" {
 #   type = map(any)
 # }
+variable "db_p" {
+  type = map(any)
+}
