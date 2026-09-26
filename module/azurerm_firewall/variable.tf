@@ -1,3 +1,3 @@
-variable "fir" {
-  type = map(any)
-}
+# variable "fir" {
+#   type = map(any)
+# }
