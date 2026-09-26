@@ -7,8 +7,8 @@ resource "azurerm_postgresql_flexible_server" "db-learning" {
 #   delegated_subnet_id           = azurerm_subnet.example.id
 #   private_dns_zone_id           = azurerm_private_dns_zone.example.id
 #   public_network_access_enabled = false
-#   administrator_login           = "admin123"
-#   administrator_password        = "Admin@123"
+administrator_login           = "admin123"
+administrator_password        = "Admin@123"
 #   zone                          = "1"
 
 #   storage_mb   = 32768
