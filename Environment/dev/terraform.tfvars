@@ -117,6 +117,10 @@ db_p = {
     resource_group_name = "dev-rg"
     location            = "eastus"
     version             = "17"
+    administrator_login    = "admin123"
+  administrator_password = "Admin@123"
+  sku_name   = "B_Standard_B1ms"
+  storage_mb = "32768"
 
 
   }
