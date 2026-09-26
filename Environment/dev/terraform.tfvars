@@ -113,7 +113,7 @@ vm_p = {
 }
 db_p = {
   db1 = {
-    db_name             = "amal-postgres_sql"
+    db_name             = "amalpostgressql"
     resource_group_name = "dev-rg"
     location            = "eastus"
     version             = "17"
