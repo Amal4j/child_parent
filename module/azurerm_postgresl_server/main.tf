@@ -2,7 +2,7 @@ resource "azurerm_postgresql_flexible_server" "db-learning" {
     for_each = var.db_c
   name                          = each.value.db_name
   resource_group_name           = each.value.resource_group_name
-  location                      = each.value.location
+  location                  = each.value.location
   version                       = each.value.version
 #   delegated_subnet_id           = azurerm_subnet.example.id
 #   private_dns_zone_id           = azurerm_private_dns_zone.example.id
