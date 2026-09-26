@@ -1,2 +1,2 @@
-resource "azurerm_bastion_host" "bastion" {
-}
+# resource "azurerm_bastion_host" "bastion" {
+# }
