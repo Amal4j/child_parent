@@ -14,8 +14,8 @@ module "subnet" {
 }
 module "ip" {
   depends_on = [module.resource_group]
-  source = "../../module/azurerm_public_ip"
-  pip_c  = var.ip_p
+  source     = "../../module/azurerm_public_ip"
+  pip_c      = var.ip_p
 }
 
 # module "nic" {
@@ -35,4 +35,10 @@ module "vm" {
 
 #   }
 # }
+
+module "server" {
+  depends_on = [module.resource_group, module.virtual_network]
+  source     = "../../module/azurerm_postgresl_server"
+  db_c       = var.db_p
+}
 
