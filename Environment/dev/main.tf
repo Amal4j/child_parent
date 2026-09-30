@@ -36,9 +36,9 @@ module "vm" {
 #   }
 # }
 
-module "server" {
-  depends_on = [module.resource_group, module.virtual_network]
-  source     = "../../module/azurerm_postgresl_server"
-  db_c       = var.db_p
-}
+# module "server" {
+#   depends_on = [module.resource_group, module.virtual_network]
+#   source     = "../../module/azurerm_postgresl_server"
+#   db_c       = var.db_p
+# }
 
