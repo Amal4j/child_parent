@@ -115,17 +115,17 @@ vm_p = {
   }
 
 }
-db_p = {
-  db1 = {
-    db_name             = "amalpostgressql"
-    resource_group_name = "dev-rg"
-    location            = "eastus"
-    version             = "16"
-    administrator_login    = "admin123"
-  administrator_password = "Admin@123"
-  sku_name   = "B_Standard_B1ms"
-  storage_mb = "32768"
+# db_p = {
+#   db1 = {
+#     db_name             = "amalpostgressql"
+#     resource_group_name = "dev-rg"
+#     location            = "eastus"
+#     version             = "16"
+#     administrator_login    = "admin123"
+#   administrator_password = "Admin@123"
+#   sku_name   = "B_Standard_B1ms"
+#   storage_mb = "32768"
 
 
-  }
-}
+#   }
+# }
