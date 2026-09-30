@@ -1,3 +1,3 @@
-variable "db_c" {
-  type = map(any)
-}
+# variable "db_c" {
+#   type = map(any)
+# }
