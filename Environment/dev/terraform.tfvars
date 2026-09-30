@@ -7,6 +7,10 @@ rg_p = {
     name     = "prod-rg"
     location = "eastus"
   }
+  rg3 = {
+    name = "dino-a-rg"
+    location = "eastus"
+  }
 
   # Ye RG Bala bhai ke khene pe add kara hai apun ne
   # rg3 = {
