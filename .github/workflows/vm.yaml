@@ -1,4 +1,4 @@
-name: Creating Virutal Machine at Azure
+name: Creating Virutal Machine at Azures cloud
 on:
   push:
     branches:
