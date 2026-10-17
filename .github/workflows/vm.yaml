@@ -1,4 +1,4 @@
-name: Creating Virutal Machine at Azures cloud
+name: Creating Virutal Machine on azure cloud for artifactory uploading and download 
 on:
   push:
     branches:
